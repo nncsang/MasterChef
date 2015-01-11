@@ -76,7 +76,7 @@ input:focus {
 }
 
 #register-form{
-    background: url(../images/bg-login.jpg) center  no-repeat;
+    /*background: url(../images/bg-login.jpg) center  no-repeat;*/
     background-size: 100% 100%;
     display: inline-flex;
     padding: 20px;
@@ -198,6 +198,16 @@ button:active {
     padding: 35px 0 30px;
     float: none;
     width: 400px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: rgba(215, 211, 211, 0.65);
+}
+
+.box-register{
+    margin: 0 auto;
+    padding: 35px 0 30px;
+    float: none;
+    width: 600px;
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     background: rgba(215, 211, 211, 0.65);
