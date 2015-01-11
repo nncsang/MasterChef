@@ -70,6 +70,13 @@ input:focus {
     padding: 0px 10px;
 }
 
+#register-form{
+    background: url(../images/bg-login.jpg) center center no-repeat;
+    display: inline-flex;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
 button {
     cursor: pointer;
     width: 300px;
