@@ -70,7 +70,7 @@ input:focus {
 }
 
 #login-form{
-    background: url(../images/bg-login.jpg) center center no-repeat;
+    /*background: url(../images/bg-login.jpg) center center no-repeat;*/
     display: inline-block;
     padding: 0px 10px;
 }
@@ -191,6 +191,17 @@ button:active {
 .connect a.twitter { background: url(../images/twitter.png) center center no-repeat; }
 
 .connect a:hover { background-position: center bottom; }
+
+
+.box {
+    margin: 0 auto;
+    padding: 35px 0 30px;
+    float: none;
+    width: 400px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: rgba(215, 211, 211, 0.65);
+}
 
 
 
