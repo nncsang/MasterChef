@@ -79,13 +79,13 @@ input:focus {
     /*background: url(../images/bg-login.jpg) center  no-repeat;*/
     background-size: 100% 100%;
     display: inline-flex;
-    padding: 20px;
+    padding: 0 20px 0 40px;
     padding-bottom: 40px;
 }
 
 button {
     cursor: pointer;
-    width: 300px;
+    width: 270px;
     height: 44px;
     margin-top: 25px;
     padding: 0;
