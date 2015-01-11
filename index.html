@@ -22,8 +22,12 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/highcharts.js"></script>
-        <script type="text/javascript" charset="utf-8" async defer>
+        <script type="text/javascript">
         var showResult=true;
+        function initResult(){
+            var result = document.getElementById("result");
+            //result.style.display = "none";
+        }
         function toogleSearchResult(){
             var form = document.getElementById("search-form");
             var result = document.getElementById("result");
@@ -31,6 +35,7 @@
             if (showResult){
                 form.style.display = "none";
                 result.style.display = "block";
+                //result.style.visibility ="visible"
             }else{
                 form.style.display = "block";
                 result.style.display = "none";
@@ -47,7 +52,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="logo">
-                                <a href="#"><img src="images/logo.png" title="Master Chef"></a>
+                                <a href="#"><img src="images/logo.png" title="Master Chef" alt=""></a>
                             </div>
                         </div>
                         <nav class="col-md-9">
@@ -261,30 +266,32 @@
                 <div id="search-form">
                     <div class="leave-form">
                         <form action="#" method="post" class="leave-comment">
-                            <div class="row">
-                            <h3>Type of meal you want:</h3>
                             <div>
-                                <input type="checkbox" name="name" id="name" placeholder="Name" value="Breakfast">
-                                <input type="checkbox" name="name" id="name" placeholder="Name" /> Lunch
-                                <input type="checkbox" name="name" id="name" placeholder="Name" /> Dinner
-                            </div>
-                            <div>
-                                <input type="text" name="email" id="email" placeholder="Email" />
+                                <h4 style="width: 250px;display: inline-block;">Type of meal you want:</h4> 
+                                <select>
+                                    <option>Breakfast</option>
+                                    <option>Lunch</option>
+                                    <option>Dinner</option>
+                                </select>
                             </div>
                             <div>
-                                <input type="text" name="subject" id="subject" placeholder="Subject" />
-                            </div>
-                            </div>
-                            <div class="row">        
-                                <div class="text col-md-12">
-                                    <textarea name="text" placeholder="Comment"></textarea>
-                                </div>   
-                            </div>                              
+                                <h4 style="width: 250px;display: inline-block;">Number of people:</h4> 
+                                <input class="select" type="number" />
+                            </div> 
+                            <div>
+                                <h4 style="width: 250px;display: inline-block;">Food restrictions</h4> 
+                                <select>
+                                    <option>On diet</option>
+                                    <option>Vegatarian</option>
+                                    <option>None</option>
+                                </select>
+                            </div> 
+
                         </form>
                     </div>
                 </div>
 
-                <div id="result" style="display:none;">
+                <div id="result"; style="display:none">
                     <div id="products-post">
                         <div class="container">
                             <div class="row">
@@ -406,12 +413,10 @@
                         </div>
                     </div>     
                 </div>
-
-                <div class="send">
-                    <button onclick="toogleSearchResult()">Search</button>
-                </div>
-                
+            <div class="send">
+                <button onclick="toogleSearchResult()">Search</button>
             </div>
+                
         </div>
 		<footer>
             <div class="container">
