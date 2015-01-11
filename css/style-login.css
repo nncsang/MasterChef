@@ -71,10 +71,11 @@ input:focus {
 }
 
 #register-form{
-    background: url(../images/bg-login.jpg) center center no-repeat;
+    background: url(../images/bg-login.jpg) center  no-repeat;
+    background-size: 100% 100%;
     display: inline-flex;
     padding: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 button {
