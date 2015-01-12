@@ -53,13 +53,13 @@ function showPosition(position) {
   var dummy3 = new google.maps.Marker({
     position: new google.maps.LatLng(position.coords.latitude - 0.002, position.coords.longitude - 0.001), 
     map: map, 
-    title:"Casino"
+    title:"Random Shop"
   });
   
   var dummy4 = new google.maps.Marker({
     position: new google.maps.LatLng(position.coords.latitude - 0.002, position.coords.longitude + 0.002), 
     map: map, 
-    title:"Casino"
+    title:"EURECOM"
   });
 }
 
