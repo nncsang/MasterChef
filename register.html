@@ -28,24 +28,6 @@
                                 <a href="#"><img src="images/logo.png" title="Master Chef" alt=""></a>
                             </div>
                         </div>
-                        <!-- <nav class="col-md-9">
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="/">My meal</a></li>
-                                    <li><a href="/about.html">About us</a></li>
-                                    <li><a href="/">Log out</a></li>
-                                </ul>
-                            </div>
-                        </nav> -->
-                        <!-- <div class="col-md-3">
-                            <div class="search-box">  
-                                <form name="search_form" method="get" class="search_form">
-                                    <input id="search" type="text" />
-                                    <input type="submit" id="search-button" />
-                                </form>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -69,18 +51,21 @@
                                     <div id="register-form">
                                         <form method="post" action="">
                                             <p style="text-align: left; padding: 0 20px; color: #ffffff">NAME</p>
-                                            <input style="margin-top: 0; margin-bottom: 10px" type="text" placeholder="Enter your first name" name="firstname">
+                                            <input style="margin-top: 0; margin-bottom: 10px" type="text" placeholder="Enter your first name" name="firstname" required>
                                             <p style="text-align: left; padding: 0 20px; color: #ffffff">EMAIL ADDRESS</p>
-                                            <input style="margin-top: 0; margin-bottom: 10px" type="email" placeholder="Enter your confirmation email" name="email">
+                                            <input style="margin-top: 0; margin-bottom: 10px" type="email" placeholder="Enter your confirmation email" name="email" required>
 
                                             <p style="text-align: left; padding: 0 20px; color: #ffffff">AVATAR</p>
 
                                             <div class="profile-avatar-wrap">
-                                                <img style="width: 96px; height: 96px" alt="Image for Profile" id="profile-avatar" src="images/avatar-blank.jpg">
+                                                <p>
+                                                    <img style="width: 96px; height: 96px" alt="Image for Profile" id="profile-avatar" src="images/avatar-blank.jpg">
+                                                    <input style="width: 270px; height: 28px; padding-left: 0px; margin-left: 20px" type="file">
+                                                </p>
                                             </div>
                                             
                                             <p style="text-align: left; padding: 0 20px; color: #ffffff">PASSWORD</p>
-                                            <input style="margin-top: 0; margin-bottom: 0px" type="password" placeholder="Choose a password" name="password">
+                                            <input style="margin-top: 0; margin-bottom: 0px" type="password" placeholder="Choose a password" name="password" required>
                                             <button type="submit">Register</button>
                                             <div class="error"><span>+</span></div>
                                         </form>
