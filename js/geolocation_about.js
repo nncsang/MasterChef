@@ -6,54 +6,26 @@ function init(){
   geocoder = new google.maps.Geocoder();
 }
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-
-function showPosition(position) {
-  
-  var mapcanvas = document.createElement('div');
-  mapcanvas.id = 'mapcanvas';
-  mapcanvas.style.height = '400px';
-  mapcanvas.style.width = '100%';
-
-  document.querySelector('#googleMap').appendChild(mapcanvas);
-  
-  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-  console.log(latlng);
-  var myOptions = {
-    zoom: 15,
+function initMap(){
+	var latlng = new google.maps.LatLng(43.618252, 7.076171);
+	
+	var myOptions = {
+    zoom: 18,
     center: latlng,
     mapTypeControl: false,
     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  
-  map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+ 
+  map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
   
   var marker = new google.maps.Marker({
     position: latlng, 
     map: map, 
-    title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
-  });
-
-  
-  geocoder.geocode({'latLng': latlng}, function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      if (results[0]) {                
-      } else {
-        alert('No results found');
-      }
-    } else {
-      alert('Geocoder failed due to: ' + status);
-    }
+    title:"Us!"
   });
 }
+google.maps.event.addDomListener(window, 'load', initMap);
 
 function error(msg) {
   var s = document.querySelector('#status');
