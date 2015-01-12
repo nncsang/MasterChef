@@ -1471,4 +1471,62 @@ select{
   margin-top: 0px
 }
 
+#video {
+  height: 256px;
+  width: 455px;
+  padding: 0;
+  margin: 0;
+}
 
+#controls {
+  margin-top:5px;
+}
+
+#button {
+  display: inline;
+}
+
+#controls div input {
+  background:url(images/buttons.gif) no-repeat top left;
+  border:none;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  float: left;
+  display: inline-block;
+}
+
+#positionview {
+  float: left;
+  width: 400px;
+  height: 40px;
+  display: inline;
+}
+
+#transportbar {
+  height: 20px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+#position {
+  background: #D7BC28;
+  height: 20px;
+  width: 0px;
+  display: block;
+}
+
+#fragmentbar {
+  height: 6px;
+  width: 300px;
+  position: relative;
+  background-color: red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  border-bottom: 5px solid white;
+}
+
+#time {
+  position: relative;
+  float: right;
+}
