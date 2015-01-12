@@ -4,7 +4,7 @@
 $(function() {
 
     if(localStorage.loggedin == "false"){
-        window.location.replace('/MasterChef/login.html')
+        window.location.replace('/login.html')
     }
 
     $('#logout').click(function() {

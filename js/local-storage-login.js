@@ -29,6 +29,6 @@ $(function() {
 
     $('#submit').click(function(){
         localStorage.loggedin = true;
-        window.location.replace('/MasterChef')
+        window.location.replace('/')
     });
 });
