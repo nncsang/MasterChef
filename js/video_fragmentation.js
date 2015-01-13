@@ -1,9 +1,11 @@
 // get video element
 
+var video_width;
 function init_video_fragment(){
   video = document.getElementById("instruction_video");
   fragend = 0;
 
+  video_width = video.getBoundingClientRect().width;
   // transport bar, play button etc
   position    = document.getElementById("position");
   fragmentbar = document.getElementById("fragmentbar");
@@ -15,27 +17,27 @@ function init_video_fragment(){
   function curTimeUpdate(evt) {
     // stop playing if reached end of fragment
     if (video.currentTime >= fragend && !video.paused) togglePlay();
-    curTime.innerHTML = video.currentTime.toFixed(2);
-    position.style.width = 300*video.currentTime/video.duration + "px";
+    // curTime.innerHTML = video.currentTime.toFixed(2);
+    position.style.width = video_width*video.currentTime/video.duration + "px";
   }
 
-  play.addEventListener("click", togglePlay, false);
-  function togglePlay() {
-    if (video.paused == false) {
-      video.pause();
-      play.style.backgroundPosition = "0 0";
-    } else {
-      video.play();
-      play.style.backgroundPosition = "0 -75px";
-    }
-  }
+  // play.addEventListener("click", togglePlay, false);
+  // function togglePlay() {
+  //   if (video.paused == false) {
+  //     video.pause();
+  //     play.style.backgroundPosition = "0 0";
+  //   } else {
+  //     video.play();
+  //     play.style.backgroundPosition = "0 -75px";
+  //   }
+  // }
 
   function updateFragment(url) {
     var fragment = retrieveTimeFragment(url);
     if (fragment != "") {
       video.currentTime = (1.0*fragment[0]).toFixed(2);
-      fragmentbar.style.left = 300.0*fragment[0]/video.duration + "px";
-      fragmentbar.style.width = 300.0*(fragment[1]-fragment[0])/video.duration + "px";
+      fragmentbar.style.left = video_width*fragment[0]/video.duration + "px";
+      fragmentbar.style.width = video_width*(fragment[1]-fragment[0])/video.duration + "px";
       fragend = fragment[1];
     } else {
       fragend = video.duration;
@@ -46,7 +48,7 @@ function init_video_fragment(){
   video.addEventListener("loadedmetadata", init, false);
   function init(evt) {
     // update duration display
-    duration.innerHTML = video.duration.toFixed(2);
+    // duration.innerHTML = video.duration.toFixed(2);
     fragend = video.duration;
     // calculate video url & offset
     // jump to offset given in video url
