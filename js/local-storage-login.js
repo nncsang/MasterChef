@@ -2,11 +2,16 @@
  * Created by Khoa on 1/12/2015.
  */
 $(function() {
-    localStorage.loggedin = false;
-    if (localStorage.chkbx && localStorage.chkbx != '') {
+    var expiration = new Date();
+    var days = 7;
+    expiration.setTime(expiration.getTime()+(days*24*60*60*1000));
+
+    setCookie("loggedin", false, expiration);
+
+    if(getCookie("chkbx") && getCookie("chkbx") != ''){
         $('#remember_me').attr('checked', 'checked');
-        $('#username').val(localStorage.usrname);
-        $('#pass').val(localStorage.pass);
+        $('#username').val(getCookie('usrname'));
+        $('#pass').val(getCookie('pass'));
     } else {
         $('#remember_me').removeAttr('checked');
         $('#username').val('');
@@ -17,18 +22,20 @@ $(function() {
 
         if ($('#remember_me').is(':checked')) {
             // save username and password
-            localStorage.usrname = $('#username').val();
-            localStorage.pass = $('#pass').val();
-            localStorage.chkbx = $('#remember_me').val();
+
+            setCookie("usrname",$('#username').val(),expiration);
+            setCookie("pass",$('#pass').val(),expiration);
+            setCookie("chkbx",$('#remember_me').val(),expiration);
         } else {
-            localStorage.usrname = '';
-            localStorage.pass = '';
-            localStorage.chkbx = '';
+
+            setCookie("usrname",'',expiration);
+            setCookie("pass",'',expiration);
+            setCookie("chkbx",'',expiration);
         }
     });
 
     $('#submit').click(function(){
-        localStorage.loggedin = true;
-        window.location.replace('/')
+        setCookie("loggedin",true,expiration);
+        window.location.replace('/MasterChef/index.html')
     });
 });
