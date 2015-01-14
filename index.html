@@ -22,6 +22,8 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/highcharts.js"></script>
+        <script src="js/mymeal.js"></script>
+        <script src="js/storage.js"></script>
         <script type="text/javascript">
         var showResult=true;
         function initResult(){
@@ -58,8 +60,8 @@
                         <nav class="col-md-9">
                             <div class="main-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="/">My meal</a></li>
+                                    <li><a href="/index.html">Home</a></li>
+                                    <li><a href="/mymeal.html">My meal</a></li>
                                     <li><a href="/about.html">About us</a></li>
                                     <li><a href="/">Log out</a></li>
                                 </ul>
@@ -129,8 +131,8 @@
                                     <span>Calories and Fat Grams: 200 kcal/ 150g</span>
                                     <br>
                                     <span>Serves: 2 people</span>
-                                    <div>
-                                       <img class="add_button" src="images/add_button.png"<a href="#" onclick="appendMeal(1); return false;"> Add to my meal</a>
+                                    <div id="meal1">
+                                       <img class="add_button" src="images/add_button.png"><a href="#" style="font-size: 11px !important;" onclick="appendMeal(1); return false;"> Add to my meal</a>
                                     </div>
                                 </div>
                                 <div class="content-hide">
@@ -152,6 +154,9 @@
                                     <span>Calories and Fat Grams: 200 kcal/ 150g</span>
                                     <br>
                                     <span>Serves: 2 people</span>
+                                    <div id="meal2">
+                                       <img class="add_button" src="images/add_button.png"><a href="#" style="font-size: 11px !important;" onclick="appendMeal(2); return false;"> Add to my meal</a>
+                                    </div>
                                 </div>
                                 <div class="content-hide">
                                     <p>I tried this just before the Noel, it's so tasty.</p>
@@ -172,6 +177,9 @@
                                     <span>Calories and Fat Grams: 500 kcal/ 250g</span>
                                     <br>
                                     <span>Serves: 6 people</span>
+                                    <div id="meal3">
+                                       <img class="add_button" src="images/add_button.png"><a href="#" style="font-size: 11px !important;" onclick="appendMeal(3); return false;"> Add to my meal</a>
+                                    </div>
                                 </div>
                                 <div class="content-hide">
                                     <p>This is version of a prawn curry from Nonya Flavours: A Complete Guide To Penang Straits Chinese Cuisine. It's a favourite in our house and dead easy.</p>
@@ -192,6 +200,9 @@
                                     <span>Calories and Fat Grams: 300 kcal/ 200g</span>
                                     <br>
                                     <span>Serves: 4 people</span>
+                                    <div id="meal4">
+                                       <img class="add_button" src="images/add_button.png"><a href="#" style="font-size: 11px !important;" onclick="appendMeal(4); return false;"> Add to my meal</a>
+                                    </div>
                                 </div>
                                 <div class="content-hide">
                                     <p>Bean-based soups often make an appearance in my kitchen over the winter months, when their heartiness is welcome.</p>
@@ -212,6 +223,9 @@
                                     <span>Calories and Fat Grams: 200 kcal/ 150g</span>
                                     <br>
                                     <span>Serves: 4 people</span>
+                                    <div id="meal5">
+                                       <img class="add_button" src="images/add_button.png"><a href="#" style="font-size: 11px !important;" onclick="appendMeal(5); return false;"> Add to my meal</a>
+                                    </div>
                                 </div>
                                 <div class="content-hide">
                                     <p>Haloumi with honeyed eggplant, chickpea & cumin salad with green olive & parsley sauce</p>
@@ -232,6 +246,9 @@
                                     <span>Calories and Fat Grams: 300 kcal/ 150g</span>
                                     <br>
                                     <span>Serves: 6 people</span>
+                                    <div id="meal6">
+                                       <img class="add_button" src="images/add_button.png"><a href="#" style="font-size: 11px !important;" onclick="appendMeal(6); return false;"> Add to my meal</a>
+                                    </div>
                                 </div>
                                 <div class="content-hide">
                                     <p>A very popular soup, it's easy to make, fast and simple</p>
