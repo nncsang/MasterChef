@@ -32,6 +32,9 @@ function init_video_fragment(){
   //   }
   // }
 
+  var url = window.location.href;
+  updateFragment(url);
+
   function updateFragment(url) {
     var fragment = retrieveTimeFragment(url);
     if (fragment != "") {
