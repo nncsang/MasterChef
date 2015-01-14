@@ -36,6 +36,6 @@ $(function() {
 
     $('#submit').click(function(){
         setCookie("loggedin",true,expiration);
-        window.location.replace('/MasterChef/index.html')
+        window.location.replace('index.html')
     });
 });
