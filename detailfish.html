@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Master Chef Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="css/font.css" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <!-- <link rel="stylesheet" href="css/templatemo_misc.css"> -->
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/testimonails-slider.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/jquery.gmap3.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/highcharts.js"></script>  
+        <script src="js/geolocation.js"></script>  
+
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>    
+        <script type="text/javascript">
+        $(function () {
+            $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                credits: {
+                  enabled: false
+                },
+                title: {
+                    text: 'Weekly Estimated Calorie and Fat Grams'
+                },
+                subtitle: {
+                    text: 'Source: Master-Chef.com'
+                },
+                xAxis: {
+                    categories: [
+                        'Calories',
+                        'Pro',
+                        'Fat',
+                        'Carb',
+                        'vitA',
+                        'vitC',
+                        'satF'
+                    ]
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'gram'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: '',
+                    data: [37.14, 20.2, 15.8, 2.2, 4.0, 14.0, 10.6]
+
+                }]
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+        $(function () {
+            $('#container-pie').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    //plotBorderWidth: 1,//null,
+                    plotShadow: false
+                },
+                credits: {
+                  enabled: false
+                },
+                title: {
+                    text: 'Food Statistics'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Percentage',
+                
+                    data: [
+                        ['Calories',   45.0],
+                        ['Pro',       26.8],
+                        ['Fat',    8.5],
+                        ['Carb',     6.2],
+                        ['vitA',   0.2],
+                        ['vitC',   0.2],
+                        ['vitF',   0.3],
+                    ]
+                }]
+            });
+        });
+        </script>
+
+    </head>
+    <body onload="init(), getLocation()">
+        <header>
+            <div id="main-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="logo">
+                                <a href="#"><img src="images/logo.png" title="Master Chef"></a>
+                            </div>
+                        </div>
+                        <nav class="col-md-9">
+                            <div class="main-menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="/">My meal</a></li>
+                                    <li><a href="/about.html">About us</a></li>
+                                    <li><a href="/">Log out</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- <div class="col-md-3">
+                            <div class="search-box">  
+                                <form name="search_form" method="get" class="search_form">
+                                    <input id="search" type="text" />
+                                    <input type="submit" id="search-button" />
+                                </form>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="product-post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="heading-section" style="padding:0px !important">
+                            <h2>FISH</h2>
+                            <img src="images/under-heading.png" alt=""  style="margin-bottom:20px !important"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="single-blog" class="page-section first-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="product-item col-md-12">
+                                <div class="row">
+                                    <div class="col-md-7">  
+                                            <div class="image">
+                                                <div class="image-post">
+                                                    <img src="images/fish.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-title">
+                                                    <h3>Sicilian fish with potato, eggplant & tomato relish</h3>
+                                                    <span class="subtitle">2 comment(s)</span>
+                                                </div>
+
+                                                <h3 class="step">STEP 1</h3> <br/>
+                                                <p>Heat 1/4 cup of the oil in a large frying pan over medium-high heat. Fry the potatoes, celery, onion and eggplant for 5 minutes, stirring, until slightly softened. Add the tomatoes and garlic and fry for a further 2 minutes or until the vegetables have softened. Reduce the heat to medium. Add the capers, olives, chilli, sugar, vinegar and capsicums and stir to combine. Simmer for 5 minutes then stir in the toasted almonds.</p>
+                                                <h3 class="step">STEP 2</h3> <br/>
+                                                <p>Heat the remaining oil in a large frying pan over high heat. Season the fish with salt. Carefully put the fillets in the pan, skin side down. Fry for 3 minutes or until golden and crisp. Turn over and fry for a further 1-2 minutes until just cooked through. Serve the fish with the potato, eggplant and tomato relish.</p>
+                                            </div>
+                                            <div>
+
+                                                <div class="product-title">
+                                                    <h3>INSTRUCTION VIDEO</h3>
+                                                </div>
+
+                                                <video id="video" class="video full" controls style="height: 400px !important; width: 600px !important;">
+                                                    <source src="video/fish.mp4" type="video/mp4">                                
+                                                    Your browser does not support HTML5 video.
+                                                </video>
+                                            </div>
+
+                                            <div id="services">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="heading-section">
+                                                                <h2>NUTRITION ANALYSICS</h2>
+                                                                <img src="images/under-heading.png" alt="" >
+                                                            </div>
+                                                            <section>
+                                                                <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                                                <div id="container-pie" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="divide-line">
+                                                <img src="images/div-line.png" alt="" />
+                                            </div>
+                                        <div class="leave-comment">
+                                            <div class="leave-one">
+                                                <h4>Leave a comment</h4>
+                                            </div>
+                                        </div>
+                                        <div class="leave-form">
+                                            <form action="#" method="post" class="leave-comment">
+                                                <div class="row">
+                                                <div class="name col-md-4">
+                                                    <input type="text" name="name" id="name" placeholder="Name" />
+                                                </div>
+                                                <div class="email col-md-4">
+                                                    <input type="text" name="email" id="email" placeholder="Email" />
+                                                </div>
+                                                <div class="subject col-md-4">
+                                                    <input type="text" name="subject" id="subject" placeholder="Subject" />
+                                                </div>
+                                                </div>
+                                                <div class="row">        
+                                                    <div class="text col-md-12">
+                                                        <textarea name="text" placeholder="Comment"></textarea>
+                                                    </div>   
+                                                </div>                              
+                                                <div class="send">
+                                                    <button type="submit">Send</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-md-offset-1">
+                                        <div class="side-bar">
+                                            <div class="news-letters">
+                                                <h4>Ingredients</h4>
+                                                <div class="archives-list">
+                                                    <ul>
+                                                        <li><a href="#">2 €</a> 1⁄3 cup extra virgin olive oil</li>
+                                                        <li><a href="#">2 €</a> 300g waxy potatoes, coarsely chopped</a></li>
+                                                        <li><a href="#">2 €</a> 2 sticks celery, coarsely chopped</a></li>
+                                                        <li><a href="#">2 €</a> 1 red onion, coarsely chopped</a></li>
+                                                        <li><a href="#">2 €</a> 1 tablespoon belacan (fermented shrimp paste), toasted (see below*)</a></li>
+                                                        <li><a href="#">2 €</a> 400g can chopped tomatoes</a></li>
+														<li><a href="#">2 €</a> 2 garlic cloves, finely chopped</a></li>
+														<li><a href="#">2 €</a> 2 tablespoons capers, rinsed, drained </a></li>
+														<li><a href="#">2 €</a> 1⁄4 cup coarsely chopped pitted Kalamata olives</a></li>
+														<li><a href="#">2 €</a> 1-2 long red chillies, thinly sliced</a></li>
+														<li><a href="#">2 €</a> 2 teaspoons caster sugar</a></li>
+														<li><a href="#">2 €</a> 225g jar roasted capsicums, drained, coarsely chopped</a></li>
+														<li><a href="#">2 €</a> 1⁄3 cup slivered almonds, toasted</a></li>
+														li><a href="#">2 €</a>4 x 220g fillets firm-fleshed fish, such as kingfish, kahawai or trevally</a></li>
+                                                    </ul>
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div>   
+
+                                    <div class="col-md-4 col-md-offset-1">
+                                        <div class="side-bar">
+                                            <div class="news-letters">
+                                                <h4>SHOPS NEAR YOU</h4>
+                                                <div id="geolocation">
+                                                    
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-4 col-md-offset-1" style="margin-top:40px">
+                                        <div class="comments-title">
+                                            <div class="comment-section">
+                                                <h4>2 comment(s)</h4>
+                                            </div>
+                                        </div>
+                                        <div class="all-comments">
+                                            <div class="view-comments">
+                                                <div class="comments">
+                                                    <div class="comment-body">
+                                                        <h6>Diana Aung</h6>
+                                                        <span class="date">12 Sep 2084 - 11:00 AM</span>
+                                                        
+                                                        <p>Vestibulum molestie odio sit amet malesuada tincidunt. Donec sollicitudin diam ut tellus bibendum ullamcorper. Fusce vel porttitor libero.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="view-comments">
+                                                <div class="comments">
+                                                    <div class="comment-body">
+                                                        <h6>Kimberly Mya</h6>
+                                                        <span class="date">14 Sep 2084 - 09:30 PM</span>
+                                                
+                                                        <p>Nullam non lorem sed tellus vulputate pulvinar ac quis velit. Ut sit amet turpis feugiat sem molestie lacinia.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+		<footer>
+            <div class="container">
+                <div class="bottom-footer">
+                    <p>Copyright © 2015 <a href="#">Thésa Group</a> | NGUYEN Hoang Minh - DIEP Chi Kien - NGUYEN Trong Khoa - NGUYEN Ngoc Chau Sang</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
