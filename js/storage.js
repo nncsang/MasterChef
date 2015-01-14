@@ -1,3 +1,15 @@
+function updateAdd(){
+	var meals = JSON.parse(localStorage["meals"]);
+	for (i = 1; i <= 6; i++){
+		var meal = document.getElementById("meal" + i);
+		if (meals.indexOf(i) != -1){
+			meal.style.display = "none";
+		}else{
+			meal.style.display = "block";
+		}
+	}
+}
+
 function appendMeal(index)
 {
 	var cur;
@@ -13,6 +25,7 @@ function appendMeal(index)
 	
 	cur.push(index);
 	localStorage["meals"] = JSON.stringify(cur);
+	updateAdd();
 }
 
 function removeMeal(index)
@@ -22,5 +35,6 @@ function removeMeal(index)
 		var cur = JSON.parse(localStorage["meals"]);
 		cur.splice(index, 1);
 		localStorage["meals"] = JSON.stringify(cur);
+		//updateAdd();
 	}
 }
