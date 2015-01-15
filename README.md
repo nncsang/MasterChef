@@ -12,7 +12,7 @@ Our application is a cooking webpage. It gives recommendations on cooking and nu
 Users are able to add/remove their favourite foods to/from ’MY MEAL’ (see /mymeal.html for detail).
 
 
-Features' HTML5L in the project
+Features' HTML5 in the project
 ======
 In this application, we used different kinds of features of HTML5 to facilitate the development process and the most important thing is to give users the best interactions. In particular, we used:
 
