@@ -2,18 +2,23 @@
  * Created by Khoa on 1/12/2015.
  */
 $(function() {
+    var expiration = new Date();
+    var days = 7;
+    expiration.setTime(expiration.getTime()+(days*24*60*60*1000));
 
-    if(localStorage.loggedin == "false"){
-        window.location.replace('/login.html')
+    if(getCookie("loggedin") == "false"){
+        window.location.replace('login.html')
     }
 
     $('#logout').click(function() {
-        localStorage.loggedin = false;
-        if (localStorage.chkbx == "remember-me") {
+        setCookie("loggedin",false, expiration);
+
+        if(getCookie("chkbx") == "remember-me"){
         } else {
-            localStorage.usrname = '';
-            localStorage.pass = '';
-            localStorage.chkbx = '';
+            setCookie("usrname",'',expiration);
+            setCookie("pass",'',expiration);
+            setCookie("chkbx",'',expiration);
         }
+
     });
 });
