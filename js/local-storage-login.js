@@ -6,7 +6,7 @@ $(function() {
     var days = 7;
     expiration.setTime(expiration.getTime()+(days*24*60*60*1000));
 
-    setCookie("loggedin", false, expiration);
+    //setCookie("loggedin", false, expiration);
 
     if(getCookie("chkbx") && getCookie("chkbx") != ''){
         $('#remember_me').attr('checked', 'checked');
@@ -20,22 +20,37 @@ $(function() {
 
     $('#remember_me').click(function() {
 
+        // if ($('#remember_me').is(':checked')) {
+        //     // save username and password
+
+        //     setCookie("usrname",$('#username').val(),expiration);
+        //     setCookie("pass",$('#pass').val(),expiration);
+        //     setCookie("chkbx",$('#remember_me').val(),expiration);
+        // } else {
+
+        //     setCookie("usrname",'',expiration);
+        //     setCookie("pass",'',expiration);
+        //     setCookie("chkbx",'',expiration);
+        // }
+    });
+
+    $('#submit').click(function(){
         if ($('#remember_me').is(':checked')) {
             // save username and password
 
             setCookie("usrname",$('#username').val(),expiration);
             setCookie("pass",$('#pass').val(),expiration);
             setCookie("chkbx",$('#remember_me').val(),expiration);
+            setCookie("loggedin",true,expiration);
         } else {
 
             setCookie("usrname",'',expiration);
             setCookie("pass",'',expiration);
             setCookie("chkbx",'',expiration);
+            setCookie("loggedin",true, null);
         }
-    });
 
-    $('#submit').click(function(){
-        setCookie("loggedin",true,expiration);
+        
         window.location.replace('index.html')
     });
 });

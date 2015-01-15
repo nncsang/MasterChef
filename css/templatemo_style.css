@@ -1536,3 +1536,9 @@ select{
   height: 30px;
   width: 30px;
 }
+
+.rememberme{
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}

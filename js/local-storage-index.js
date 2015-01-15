@@ -6,7 +6,8 @@ $(function() {
     var days = 7;
     expiration.setTime(expiration.getTime()+(days*24*60*60*1000));
 
-    if(getCookie("loggedin") == "false"){
+    var cookie = getCookie("loggedin");
+    if(cookie == null || cookie == false){
         window.location.replace('login.html')
     }
 
