@@ -1,5 +1,7 @@
 # MasterChef
 
+This is our project for **Human-Computer Interaction for the Web: Interaction Design and User Evaluation - Fall 2014** course at EURECOM institute. In this project, we focus on demonstrating new features of HTML5. 
+￼ 
 Project Description
 ======
 Our application is a cooking webpage. It gives recommendations on cooking and nutrition. In the homepage, users can reach the list of foods that we suggest. For every food, we provide details of nutrition analysis and instructions to cook in different kinds of formats (video, images, text). Users also can search foods for their own needs by providing:
