@@ -1,6 +1,6 @@
 # MasterChef
 
-This is our project for **Human-Computer Interaction for the Web: Interaction Design and User Evaluation - Fall 2014** course at EURECOM institute. In this project, we focus on demonstrating new features of HTML5. 
+This is our project for *Human-Computer Interaction for the Web: Interaction Design and User Evaluation - Fall 2014* course at EURECOM institute. In this project, we focus on demonstrating new features of HTML5. 
 ￼ 
 Project Description
 ======
