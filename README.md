@@ -24,7 +24,6 @@ In this application, we used different kinds of features of HTML5 to facilitate 
 	- Media Fragments URIs: we fragmented the instruction video by steps, so that users can easy to access to different parts of the instruction.
 	- Form validation for validating users’ input when providing register information
 	- Cookie: it’s not a new feature in HTML5 but it’s very helpful for storing small data during a session or specified duration. We applied cookie for session login and ”remember me” function in the login.html
-	- 
 	
 CAUTION
 ======
