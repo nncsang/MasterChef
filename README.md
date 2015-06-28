@@ -1,6 +1,6 @@
 # MasterChef
 
-This is our project for **Human-Computer Interaction for the Web: Interaction Design and User Evaluation - Fall 2014** course at EURECOM institute. In this project, we focus on demonstrating new features of HTML5. 
+This is our project for **Human-Computer Interaction for the Web: Interaction Design and User Evaluation - Fall 2014** course at EURECOM Institute. In this project, we focused on demonstrating new features of HTML5. 
 ￼ 
 Project Description
 ======
@@ -24,4 +24,8 @@ In this application, we used different kinds of features of HTML5 to facilitate 
 	- Media Fragments URIs: we fragmented the instruction video by steps, so that users can easy to access to different parts of the instruction.
 	- Form validation for validating users’ input when providing register information
 	- Cookie: it’s not a new feature in HTML5 but it’s very helpful for storing small data during a session or specified duration. We applied cookie for session login and ”remember me” function in the login.html
-
+	- 
+	
+CAUTION
+======
+The purpose of this project is to demonstrate new interesting features of HTML5, so we chose easy and not optimal implementations for quickly developing. 
