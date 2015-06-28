@@ -27,4 +27,4 @@ In this application, we used different kinds of features of HTML5 to facilitate 
 	
 CAUTION
 ======
-The purpose of this project is only to demonstrate new interesting features of HTML5, so we chose easy and not optimal implementations for quickly developing. 
+The purpose of this project is to demonstrate new interesting features of HTML5, so we chose easy and not optimal implementations for quickly developing. 
